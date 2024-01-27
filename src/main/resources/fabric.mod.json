@@ -1,26 +1,27 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "emoticons",
   "version": "${version}",
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Emoticon",
+  "description": "Emotes mod",
   "authors": [
-    "Me!"
+    "McHorse",
+    "Refactoring (Port to Legacy Fabric)"
   ],
   "contact": {
-    "homepage": "https://legacyfabric.net/",
-    "sources": "https://github.com/Legacy-Fabric/fabric-example-mod"
+    "homepage": "https://mchorse.github.io/emoticons/",
+    "sources": "https://github.com/refactorinqq/emoticons"
   },
-  "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "license": "GNU General Public License v3.0",
+  "icon": "assets/emoticons/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleMod"
+      "mchorse.emoticons.EmoticonsMod"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "emoticons.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=0.14.19",
