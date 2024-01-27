@@ -46,18 +46,14 @@ jobs:
       - name: Set outputs
         id: vars
         run: echo "sha_short=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
-      - name: Retrieve version
-        run: echo "${{ steps.vars.outputs.sha_short }}" >> $GITHUB_OUTPUT
-        id: version
-
       - name: Create a release
         uses: marvinpinto/action-automatic-releases@latest
         env:
           GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          automatic_release_tag: ${{ steps.version.outputs.version }}
+          automatic_release_tag: ${{ steps.vars.outputs.sha_short }}
           prerelease: false
-          title: ${{ steps.version.outputs.version }}
+          title: ${{ steps.vars.outputs.sha_short }}
           files: |
             emoticons/*
