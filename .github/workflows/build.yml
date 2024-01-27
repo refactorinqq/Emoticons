@@ -43,10 +43,11 @@ jobs:
 
       - name: Download artifacts
         uses: actions/download-artifact@v2
-
-      # https://stackoverflow.com/a/61919791
+      - name: Set outputs
+        id: vars
+        run: echo "sha_short=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
       - name: Retrieve version
-        run: echo "${{ github.head_ref }}‐${{ github.sha }}"
+        run: echo "${{ steps.vars.outputs.sha_short }}" >> $GITHUB_OUTPUT
         id: version
 
       - name: Create a release
@@ -55,7 +56,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          automatic_release_tag: "${{ steps.version.outputs.version }}"
+          automatic_release_tag: ${{ steps.version.outputs.version }}
           prerelease: false
           title: ${{ steps.version.outputs.version }}
           files: |
