@@ -29,13 +29,8 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v2-preview
         with:
-          name: wrapper
+          name: emoticons
           path: build/libs/*.jar
-      - name: Upload dist
-        uses: actions/upload-artifact@v2-preview
-        with:
-          name: dist
-          path: build/dist/*
 
   upload:
     runs-on: ubuntu-latest
@@ -60,9 +55,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          automatic_release_tag: ${{ steps.version.outputs.version }}
+          automatic_release_tag: "1.8.9"
           prerelease: false
-          title: ${{ steps.version.outputs.version }}
+          title: "1.8.9"
           files: |
-            wrapper/*
-            dist/*
+            emoticons/*
