@@ -1,6 +1,3 @@
-**ATTENTION**: This mod is **no longer being maintained by McHorse. It is now maintained by Chryfi.**
-There are **still going to be official updates by Chryfi and other contributors** and there have been task forces that are investigating on porting it. **If you also want to contribute to official updates**, or to the porting effort, please **join the official [McHorse's Discord server](https://discord.gg/qfxrqUF), so we can communicate with you.** Check out the [source code](https://github.com/mchorse/emoticons).
-
 ![Emoticons](https://i.imgur.com/do30WtA.png)
 
 **Emoticons** is a **cosmetic** Minecraft mod which adds custom player animations and emote system. There are **62** emotes which can be triggered by the player using keybinds which come with the mod.
@@ -11,9 +8,9 @@ Check out this playlist for showcase of the mod.
 
 ## Install
 
-Install [Minecraft Forge](http://files.minecraftforge.net/), download the latest stable version of jar file for available Minecraft version. Also install following mods: [McLib](https://www.curseforge.com/minecraft/mc-mods/mchorses-mclib). Put it in minecraft's `mods` folder, and launch the game.
+Install [Legacy Fabric](http://legacyfabric.net/), download the latest stable version of jar file for available Minecraft version. Put it in minecraft's `mods` folder, and launch the game.
 
-After that, Emoticons mod should be installed and will appear in Minecraft's mods menu. If Emoticons didn't appear in the mods menu, then something went wrong.
+After that, Emoticons mod should be installed!
 
 ## FAQ
 
@@ -24,7 +21,7 @@ A: You can disable them in McLib's dashboard (Ctrl + 0, check for conflicting ke
 A: No. It's gonna stay 1.12.2 (and 1.8.9) only.
 
 **Q: I'm using 1.8.9 version and it says something about "mclib"?**  
-A: You need to install [McLib for 1.8.9](https://www.curseforge.com/minecraft/mc-mods/mchorses-mclib/files/3102750) so it would work.
+A: You have fucked up.
 
 **Q: I'm playing with my friends on the server, and why I can't see them emote, or they can't see me emote?**  
 A: In order to see other people emote, the server must also install the mod. No mod on the server, no people emoting.
