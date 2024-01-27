@@ -1,71 +1,49 @@
-# Fabric Example Mod
+**ATTENTION**: This mod is **no longer being maintained by McHorse. It is now maintained by Chryfi.**
+There are **still going to be official updates by Chryfi and other contributors** and there have been task forces that are investigating on porting it. **If you also want to contribute to official updates**, or to the porting effort, please **join the official [McHorse's Discord server](https://discord.gg/qfxrqUF), so we can communicate with you.** Check out the [source code](https://github.com/mchorse/emoticons).
 
-- [Quick start guide](#quick-start-guide)
-  - [Introduction to the folder structure](#introduction-to-the-folder-structure)
-  - [Creating your mod](#creating-your-mod)
-  - [Useful gradle commands](#useful-gradle-commands)
-- [More info](#more-info)
-- [License](#license)
+![Emoticons](https://i.imgur.com/do30WtA.png)
 
-## Quick start guide
+**Emoticons** is a **cosmetic** Minecraft mod which adds custom player animations and emote system. There are **62** emotes which can be triggered by the player using keybinds which come with the mod.
 
-### Introduction to the folder structure
+Check out this playlist for showcase of the mod.
 
-**Build files:**
+<a href="https://youtu.be/11lAGyM1Fyc?list=PL6UPd2Tj65nFUAUardpcX1sGXNEo21ZIQ"><img src="https://img.youtube.com/vi/11lAGyM1Fyc/0.jpg"></a>
 
-| File                | Description                                              |
-| ------------------- | -------------------------------------------------------- |
-| `build.gradle`      | Configures the compilation process.                      |
-| `gradle.properties` | Contains properties for Minecraft, fabric, and your mod. |
-| `settings.gradle`   | Configures the plugin repositories.                      |
+## Install
 
-**Fabric files:**
+Install [Minecraft Forge](http://files.minecraftforge.net/), download the latest stable version of jar file for available Minecraft version. Also install following mods: [McLib](https://www.curseforge.com/minecraft/mc-mods/mchorses-mclib). Put it in minecraft's `mods` folder, and launch the game.
 
-These files are located at `src/main/resources`.
+After that, Emoticons mod should be installed and will appear in Minecraft's mods menu. If Emoticons didn't appear in the mods menu, then something went wrong.
 
-| File                    | Description                              | Additional information                                                                                                |
-| ----------------------- | ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `fabric.mod.json`       | Contains metadata about your mod.        | [wiki:fabric_mod_json_spec](https://fabricmc.net/wiki/documentation:fabric_mod_json_spec)                             |
-| `modid.mixins.json`     | Contains a list of all your mixin files. | [wiki:mixin_registration](https://fabricmc.net/wiki/tutorial:mixin_registration)                                      |
-| `assets/modid/icon.png` | The icon of your mod.                    | [wiki:fabric_mod_json_spec#icon](https://fabricmc.net/wiki/documentation:fabric_mod_json_spec?s[]=icon#custom_fields) |
+## FAQ
 
+**Q: I don't like Emoticons' animations, but emotes are very cool. Can I disable them?**  
+A: You can disable them in McLib's dashboard (Ctrl + 0, check for conflicting keybinds in Options - Controls, if it doesn't work) by enabling **Disable non-emote animations** toggle option.
 
-### Creating your mod
+**Q: Will you downgrade/upgrade mod to other version of Minecraft?**  
+A: No. It's gonna stay 1.12.2 (and 1.8.9) only.
 
-First of you must replace all occurrences of `modid` with the id of your mod.
+**Q: I'm using 1.8.9 version and it says something about "mclib"?**  
+A: You need to install [McLib for 1.8.9](https://www.curseforge.com/minecraft/mc-mods/mchorses-mclib/files/3102750) so it would work.
 
-If your mod doesn't use mixins you can safely remove the mixin entry in your `fabric.mod.json` as well as delete any `*.mixin.json` files.
+**Q: I'm playing with my friends on the server, and why I can't see them emote, or they can't see me emote?**  
+A: In order to see other people emote, the server must also install the mod. No mod on the server, no people emoting.
 
-This template has the legacy fabric api included in it's build script, more info about the api can be found at it's [github repo](https://github.com/Legacy-Fabric/fabric).
-If you know what you are doing you can also safely remove the api from the build script as it isn't required.
+**Q: Can you add support with mod X?**  
+A: No, I won't add support with any other mods.
 
-### Useful gradle commands
+**Q: Can I add custom emotes myself?**  
+A: Yes, watch [this tutorial](https://youtu.be/dhSYT2HEweM) video! Those are not synchronized across clients though. You'll have to manually send these emote files to other people.
 
-```sh
-# Compile your mod
-./gradlew build
+**Q: Can you add custom music to emotes?**  
+A: No, because I have no time/skill to make cool tunes for every emote, and if I use the original audio that would be illegal. However, you can replace the sounds in Emoticons' jar. Keep in mind that these sounds are going to loop.
 
-# Remove old build files
-./gradlew clean
+**Q: I saw emotes were used in a Minecraft client. Are they allowed?**  
+A: Before January 18th, 2022, only [Badlion Client](https://client.badlion.net/), [Lunar Client](https://www.lunarclient.com/), [Crystal Client](https://crystalclient.net/), and a couple of other purchased a license to use my work in their software for profit. Other clients were doing that illegaly (like kraft rise and kristalix clients).
 
-# Generate Minecraft sources
-./gradlew genSources
-
-# Launch a modded Minecraft client
-./gradlew runClient
-
-# Kill gradle if it's doing stupid things
-./gradlew --stop
-```
-
-## More info
-
-Additional tutorials and tips can be found in the [wiki](https://github.com/Legacy-Fabric/fabric-example-mod/wiki).
-
-For more detailed setup instructions please see the [fabric wiki](https://fabricmc.net/wiki/tutorial:setup).
-
-If you are new to fabric or Minecraft modding in general then [this wiki page](https://fabricmc.net/wiki/tutorial:primer) may help you.
+**Q: Can I use this code in my Minecraft client?**  
+A: Read the license, and make a conclusion on your own.
 
 ## License
 
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+Emoticons mod's code is licensed under GNU GPL v3.0 license. See [LICENSE.txt](./LICENSE.txt) file for more information about the license.
